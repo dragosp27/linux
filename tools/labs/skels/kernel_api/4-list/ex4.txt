@@ -1,0 +1,11 @@
+Runned commands:
+
+insmod list.ko
+
+rm list
+
+
+Observations:
+    Completed the function to allocatea new struct and add a list to it.
+    Completed the function to iterrate through the list elements and free them.
+    Loaded and unloaded the module to see the results (the values in the list).
