@@ -1,0 +1,11 @@
+Comenzi rulate:
+
+insmod mem.ko
+
+dmesg
+
+rmmmod mem
+
+
+Observatii:
+Am vazut cum se aloca si se printeaza Z de 4096 ori.
