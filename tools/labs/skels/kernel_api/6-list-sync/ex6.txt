@@ -1,0 +1,10 @@
+Runned Commands:
+
+insmod list-sync.ko
+
+rmmod list-sync
+
+
+Observations:
+    Used read-write locks to synchronize the access to the list where reading
+    and writing (deleting objects) operations were needed.
