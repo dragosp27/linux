@@ -1,0 +1,13 @@
+Used Commands:
+
+insmod load-sync.ko
+insmod load-test.ko
+
+rmmod load-test
+rmmod load-sync
+
+
+Observations:
+    Exported the neccessary functions so the load-test module cand use them.
+    Tested that we cannot remove load-sync module before load-test, as the
+    symbols are being used.
