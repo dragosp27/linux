@@ -1,9 +1,0 @@
-Runned commands:
-
-insmod sched_spin.ko
-
-rmmod sched_spin
-
-
-Observations:
-    Completed the TODOs and saw the message displayed by BUG in terminal.
