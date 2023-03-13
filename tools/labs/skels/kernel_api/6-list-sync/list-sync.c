@@ -90,7 +90,6 @@ void task_info_add_for_current(void)
 	task_info_add_to_list(next_task(next_task(current))->pid);
 }
 /* TODO 2: Export the kernel symbol */
-EXPORT_SYMBOL(task_info_add_for_current);
 
 void task_info_print_list(const char *msg)
 {
@@ -110,7 +109,6 @@ void task_info_print_list(const char *msg)
 	pr_info("]\n");
 }
 /* TODO 2: Export the kernel symbol */
-EXPORT_SYMBOL(task_info_print_list);
 
 void task_info_remove_expired(void)
 {
@@ -130,7 +128,6 @@ void task_info_remove_expired(void)
 	write_unlock(&lock);
 }
 /* TODO 2: Export the kernel symbol */
-EXPORT_SYMBOL(task_info_remove_expired);
 
 static void task_info_purge_list(void)
 {
@@ -166,7 +163,7 @@ static void list_sync_exit(void)
 	struct task_info *ti;
 
 	ti = list_entry(head.prev, struct task_info, list);
-	// atomic_set(&ti->count, 10);
+	atomic_set(&ti->count, 10);
 
 	task_info_remove_expired();
 	task_info_print_list("after removing expired");
